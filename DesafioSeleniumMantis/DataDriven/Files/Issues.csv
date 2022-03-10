@@ -1,0 +1,6 @@
+categoria,frequencia,gravidade,prioridade,atribuirA,resumo,descricao
+[Todos os Projetos] TesteElvercio,sempre,grande,alta,administrator,Bug na tela de Login, Erro Tela Login
+[Todos os Projetos] TesteElvercio,sempre,grande,alta,administrator,Bug ao incluir usuario, Erro Tela incluir
+[Todos os Projetos] TesteElvercio,sempre,grande,alta,administrator,Bug ao gerenciar projetos, Erro Tela gerenciar produtos
+[Todos os Projetos] TesteElvercio,sempre,grande,alta,administrator,Bug ao gerenciar marcadores, Erro Tela gerenciar marcadores
+[Todos os Projetos] TesteElvercio,sempre,grande,alta,administrator,Bug ao excluir perfis, Erro excluir perfis
