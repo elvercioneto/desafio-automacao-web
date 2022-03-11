@@ -91,8 +91,8 @@ Para acessar ao banco de dados do Mantis (MariaDB) siga os passos abaixo:
 
 
 
-Para esse setup, utilizei como referência o Github do Saymon:
-[Mantis4Testers-Docker] imagehttps://github.com/saymowan/Mantis4Testers-Docker
+*Para esse setup, utilizei como referência o Github do Saymon*
+[Mantis4Testers-Docker]https://github.com/saymowan/Mantis4Testers-Docker
 
 
 ## Arquitetura do Projeto
@@ -132,23 +132,13 @@ aqui é exercitar a injeção de Javascript dentro do código do Selenium.
 > No próprio template da Base2 existe um método `SendKeysJavaScript()` na classe *PageBase.cs* que realiza o preenchimento de um campopor ação de JavaScript. 
  - [x] 9) Testes deverão ser agendados pelo Gitlab-CI, Azure DevOps, Jenkins, CircleCI, TFS,
 TeamCity ou outra ferramenta de CI que preferir
-> Os testes estão implementados na pipeline do Azure, após a execução o Relatório LivingDoc é anexado na última execução através do plugin `PublishHTML` no Jenkins. O script de configuração da pipeline está disponível na raiz do projeto. O projeto possui um `webhook` que a cada push realizado no repositório do GitHub é disparado automaticamente um novo build no Jenkins.
-
-
-
-
+> Os testes estão implementados na pipeline do Azure.
 
 ## Referências
-- [Getting Started with WebDriver C# in 10 Minutes](https://www.automatetheplanet.com/getting-started-webdriver/)
-- [Most Complete Selenium WebDriver C# Cheat Sheet](https://www.automatetheplanet.com/selenium-webdriver-csharp-cheat-sheet/)
-- [UITest with C# and Selenium Grid](https://www.puresourcecode.com/dotnet/uitest-with-c-and-selenium-grid/)
-- [How To Handle Internationalization In Selenium WebDriver?](https://www.lambdatest.com/blog/internationalization-with-selenium-webdriver/)
-- [Selenium Grid Tutorial: Hub & Node](https://www.guru99.com/introduction-to-selenium-grid.html)
+- [Data-Driven Testing (DDT) e o reaproveitamento dos testes automatizados](https://medium.com/@saymowan/data-driven-testing-ddt-e-o-reaproveitamento-dos-testes-automatizados-8c8d67cc211c)
+- [Run only specific tests when using dotnet test?](https://github.com/nunit/nunit3-vs-adapter/issues/425)
+- [Docker Selenium](https://github.com/SeleniumHQ/docker-selenium)
+- [Azure DevOps](https://dev.azure.com)
 - [BDD with Selenium Webdriver and Specflow using C#](https://www.udemy.com/share/101rvK3@VWk73qt6IfuQLtDS7SexlXDcp36_PJzqLGQ3EhEop5DsS9PgjFRaKbzrHCBhOLXX/)
-- [Step-by-step guide for LivingDoc Generator](https://docs.specflow.org/projects/specflow-livingdoc/en/latest/sbsguides/sbscli.html)
-- [LivingDoc - Store it in your Continuous Integration Server](https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/sharing-and-publishing.html#jenkins)
-- [Jenkins - Publish HTML Report](https://www.youtube.com/watch?v=snlxU386wjo)
-- [Jenkins - Build Job Automatically on Git Commit - Webhook](https://youtu.be/YkabAT213h0)
-- [Backing up Database in MySQL using C#](https://stackoverflow.com/a/12311685)
-- [Configuration Files XUnit](https://xunit.net/docs/configuration-files)
-- [Configuration Files Specflow](https://docs.specflow.org/projects/specflow/en/latest/Installation/Configuration.html)
+- [GitHub da Daniela Pochini](https://github.com/danielapochini/desafio-automacao-web)
+- Meetup Base2(interno) - Implementando pipelines de testes automatizados no Azure DevOps.
