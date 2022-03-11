@@ -1,5 +1,4 @@
 ﻿using DesafioSeleniumMantis.Helpers;
-using DesafioSeleniumMantis.Queries;
 using MySql.Data.MySqlClient;
 
 namespace DesafioSeleniumMantis.DataBaseSteps
