@@ -53,44 +53,9 @@ namespace DataDriven_NetCore_NUnit
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
             Thread.Sleep(5000);
 
-            //Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
-            //Assert.Pass();
+            Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
+            
         }
 
-        /*
-         * [Test]
-        public void CriarIssue()
-        {
-            loginPage = new LoginPage();
-            loginPasswordPage = new LoginPasswordPage();
-            myViewPage = new MyViewPage();
-            loginSelectProjPage = new LoginSelectProjPage();
-            bugReportPage = new BugReportPage();
-            viewPage = new ViewPage();
-
-            #region Parameters
-            string usuario = "administrator";
-            string senha = "elvercioneto";
-            string projeto = "Projeto ElvercioNeto";
-            string categoria = "[Todos os Projetos] TesteElvercio";
-            string frequencia = "sempre";
-            string gravidade = "grande";
-            string prioridade = "alta";
-            string atribuirA = "administrator";
-            string resumo = "Bug ao tentar gerenciar marcadores";
-            string descricao = "Teste Descrição";
-
-
-            #endregion
-
-            loginPage.InserirLogin(usuario);
-            loginPasswordPage.InserirPassword(senha);
-            myViewPage.RetornaUsuarioLogado();
-            myViewPage.ClicarEmCriarTarefa();
-            loginSelectProjPage.EscolherProjeto(projeto);
-            bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
-            Thread.Sleep(5000);
-            Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
-         * */
     }
 }
