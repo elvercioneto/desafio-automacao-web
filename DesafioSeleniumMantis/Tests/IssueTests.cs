@@ -44,7 +44,6 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string projeto = "Projeto ElvercioNeto";
             string categoria = "[Todos os Projetos] TesteElvercio";
             string frequencia = "sempre";
             string gravidade = "grande";
