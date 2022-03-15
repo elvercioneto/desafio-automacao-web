@@ -78,7 +78,6 @@ namespace DesafioSeleniumMantis.Tests
             Thread.Sleep(10000);
         }
         [Test]
-        [Category("TesteCI")]
         public void ExibirMensagemErroLoginCampoVazio()
         {
             loginPage = new LoginPage();
@@ -95,7 +94,6 @@ namespace DesafioSeleniumMantis.Tests
         }
 
         [Test]
-        [Category("TesteCI")]
         public void ExibirMensagemErroSenhaIncorreta()
         {
             loginPage = new LoginPage();

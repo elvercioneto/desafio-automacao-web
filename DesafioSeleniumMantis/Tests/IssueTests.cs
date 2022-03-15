@@ -31,7 +31,6 @@ namespace DesafioSeleniumMantis.Tests
         #endregion
 
         [Test]
-        [Category("TesteCI")]
         public void CriarIssue()
         {
             loginPage = new LoginPage();

@@ -132,13 +132,12 @@ aqui é exercitar a injeção de Javascript dentro do código do Selenium.
 > No próprio template da Base2 existe um método `SendKeysJavaScript()` na classe *PageBase.cs* que realiza o preenchimento de um campopor ação de JavaScript. 
  - [x] 9) Testes deverão ser agendados pelo Gitlab-CI, Azure DevOps, Jenkins, CircleCI, TFS,
 TeamCity ou outra ferramenta de CI que preferir
-> Os testes estão implementados na pipeline do Azure.
+> Os testes estão implementados na pipeline do AzureDevOps. Nele tem uma configuração chamada *Enable continuous integration* que faz com que a cada push realizado no repositório do GitHub, a Pipeline seja disparada automaticamente.
 
 ## Referências
 - [Data-Driven Testing (DDT) e o reaproveitamento dos testes automatizados](https://medium.com/@saymowan/data-driven-testing-ddt-e-o-reaproveitamento-dos-testes-automatizados-8c8d67cc211c)
 - [Run only specific tests when using dotnet test?](https://github.com/nunit/nunit3-vs-adapter/issues/425)
 - [Docker Selenium](https://github.com/SeleniumHQ/docker-selenium)
 - [Azure DevOps](https://dev.azure.com)
-- [BDD with Selenium Webdriver and Specflow using C#](https://www.udemy.com/share/101rvK3@VWk73qt6IfuQLtDS7SexlXDcp36_PJzqLGQ3EhEop5DsS9PgjFRaKbzrHCBhOLXX/)
 - [GitHub da Daniela Pochini](https://github.com/danielapochini/desafio-automacao-web)
 - Meetup Base2(interno) - Implementando pipelines de testes automatizados no Azure DevOps.
