@@ -8,7 +8,7 @@ Os testes serão realizados no sistema Mantis Bug Tracker.
 - [Docker](https://www.docker.com/) - Ferramenta para levantar containers através de imagens
 - [Azure](https://dev.azure.com) - Ferramenta para realizar a integracão contínua do projeto na pipeline
 - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) - Linguagem utilizada para o projeto
-- [.NET 5](https://dotnet.microsoft.com/learn) - Plataforma de desenvolvimento
+- [.NET Core 3.1 ](https://dotnet.microsoft.com/learn) - Plataforma de desenvolvimento
 - [NUnit](https://nunit.org/) - Framework .NET que auxilia na construção de testes  
 - [ExtentReports](https://www.extentreports.com/) - Biblioteca de relatórios de código aberto
 
