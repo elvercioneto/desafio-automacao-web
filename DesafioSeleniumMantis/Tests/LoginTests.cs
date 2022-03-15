@@ -153,28 +153,6 @@ namespace DesafioSeleniumMantis.Tests
             Assert.AreEqual(mensagemErro, loginPage.RetornaTextoReajustes());
         }
 
-        
-        [Test]
-        public void VerificarReajusteDeSenha() //falta concluir esse método
-        {
-            loginPage = new LoginPage();
-            loginPasswordPage = new LoginPasswordPage();
-            lostPasswordPage = new LostPasswordPage();
-            
-
-            #region Parameters
-            string usuario = "administrator";
-            string email = "root@localhost";
-            string mensagemErro = "Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.";
-            #endregion
-
-            loginPage.InserirLogin(usuario);
-            loginPasswordPage.ClicarPerdeuASenha();
-            lostPasswordPage.ReajustarSenha(email);
-
-
-            Assert.AreEqual(mensagemErro, lostPasswordPage.RetornaMensagemDeErro());
-        }
         [Test]
         public void VerificarReajusteDeSenhaEmailVazio()
         {
