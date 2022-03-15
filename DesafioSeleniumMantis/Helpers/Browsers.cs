@@ -18,10 +18,10 @@ namespace DesafioSeleniumMantis.Helpers
         public static IWebDriver GetLocalChrome()
         {
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("start-maximized");
-            chromeOptions.AddArgument("enable-automation");
             chromeOptions.AddArgument("--no-sandbox");
-            chromeOptions.AddArgument("--disable-infobars");
+            chromeOptions.AddArgument("start-maximized");
+            //chromeOptions.AddArgument("enable-automation");
+            //chromeOptions.AddArgument("--disable-infobars");
             chromeOptions.AddArgument("--disable-dev-shm-usage");
             chromeOptions.AddArgument("--disable-browser-side-navigation");
             chromeOptions.AddArgument("--disable-gpu");
@@ -36,9 +36,6 @@ namespace DesafioSeleniumMantis.Helpers
             ChromeOptions chromeOptions = new ChromeOptions();
 
             chromeOptions.AddArgument("no-sandbox");
-            //chromeOptions.AddArgument("--allow-running-insecure-content");
-            //chromeOptions.AddArgument("start-maximized");
-            //chromeOptions.AddArgument("enable-automation");
             chromeOptions.AddArgument("no-sandbox");
             chromeOptions.AddArgument("--disable-infobars");
             chromeOptions.AddArgument("--disable-dev-shm-usage");
