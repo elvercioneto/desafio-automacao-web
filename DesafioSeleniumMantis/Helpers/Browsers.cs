@@ -20,7 +20,8 @@ namespace DesafioSeleniumMantis.Helpers
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("--no-sandbox");
             chromeOptions.AddArgument("start-maximized");
-            chromeOptions.AddArgument("--disable-cache");
+            chromeOptions.AddArgument("--disable-application-cache");
+            chromeOptions.AddArgument("disk-cache-size=0");
             //chromeOptions.AddArgument("enable-automation");
             chromeOptions.AddArgument("--disable-dev-shm-usage");
             chromeOptions.AddArgument("--disable-browser-side-navigation");
