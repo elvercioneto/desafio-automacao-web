@@ -78,6 +78,7 @@ namespace DesafioSeleniumMantis.Tests
             Thread.Sleep(10000);
         }
         [Test]
+        [Category("TesteCI")]
         public void ExibirMensagemErroLoginCampoVazio()
         {
             loginPage = new LoginPage();

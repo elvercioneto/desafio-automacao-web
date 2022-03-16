@@ -31,6 +31,7 @@ namespace DesafioSeleniumMantis.Tests
         #endregion
 
         [Test]
+        [Category("TesteCI")]
         public void CriarIssue()
         {
             loginPage = new LoginPage();
@@ -451,16 +452,7 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string projeto = "Projeto ElvercioNeto";
-            string categoria = "[Todos os Projetos] TesteElvercio";
-            string frequencia = "sempre";
-            string gravidade = "obstáculo";
-            string prioridade = "alta";
             string atribuido = "administrator";
-            string resumo = "Teste gravidade alta";
-            string relator = "administrator";
-
-
             #endregion
 
             loginPage.InserirLogin(usuario);
@@ -859,16 +851,6 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string projeto = "Projeto ElvercioNeto";
-            string categoria = "TesteElvercio";
-            string frequencia = "sempre";
-            string gravidade = "grande";
-            string prioridade = "alta";
-            string atribuirA = "administrator";
-            string resumo = "Teste gravidade alta";
-            string descricao = "Teste Descrição";
-
-
             #endregion
 
             loginPage.InserirLogin(usuario);

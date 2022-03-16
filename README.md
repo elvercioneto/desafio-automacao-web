@@ -107,6 +107,22 @@ Para acessar ao banco de dados do Mantis (MariaDB) siga os passos abaixo:
 | **Pages**         | Classes quem contém o mapeamento dos elementos e ações correspondentes à uma página/tela do sistema. | 
 | **Tests**         | Classes quem contémos métodos correspondentes aos testes de uma funcionalidade. | 
 
+## Executando os testes na Pipeline do Azure 
+
+### **1 Subir o projeto para o Github**
+### **2 Criar a Pipeline no AzureDevOps**
+![pipeline1](https://user-images.githubusercontent.com/6169190/158688930-c487cd38-e021-48f7-8042-7d34262f8245.png)
+### **3 Alterar o job Test para rodar somente os testes com a categoria TesteCI**
+![jobTest](https://user-images.githubusercontent.com/6169190/158689050-3acb3bd8-7561-4474-930f-efe8df48eac4.png)
+### **4 Criar um agent pool pra utilizar a minha máquina como runner no Azure**
+![agent](https://user-images.githubusercontent.com/6169190/158689104-05325f91-0c12-4728-b7e0-4064605c2ed0.png) 
+### **5 Executar o runner**
+![runner](https://user-images.githubusercontent.com/6169190/158689258-cd3aeedd-545e-4f29-be09-af5f98330377.png)
+### **6 Fazer qualquer alteração no código para a pipeline rodar automaticamente e verificar os resultados**
+
+
+
+
 
 ## Metas
 - [x] 1) Implementar 50 scripts de testes que manipulem uma aplicação web (sugestões: Mantis ou TestLink) com Page Objects.
