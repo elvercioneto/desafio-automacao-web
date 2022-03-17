@@ -44,6 +44,7 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
+            string projeto = "Projeto ElvercioNeto";
             string categoria = "[Todos os Projetos] TesteElvercio";
             string frequencia = "sempre";
             string gravidade = "grande";
@@ -61,7 +62,7 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.RetornaUsuarioLogado();
             myViewPage.ClicarEmCriarTarefa();
-            //loginSelectProjPage.EscolherProjeto(projeto);
+            loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
             Thread.Sleep(5000);
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
@@ -81,6 +82,7 @@ namespace DesafioSeleniumMantis.Tests
             string username = null;
             string usuario = UsuariosDBSteps.RetornaUsuario(username);
             string senha = "elvercioneto";
+            string projeto = "Projeto ElvercioNeto";
             string categoria = "[Todos os Projetos] TesteElvercio";
             string frequencia = "sempre";
             string gravidade = "grande";
@@ -94,6 +96,7 @@ namespace DesafioSeleniumMantis.Tests
             loginPage.InserirLogin(usuario);
             loginPasswordPage.InserirPassword(senha);
             myViewPage.ClicarEmCriarTarefa();
+            loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
             
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());

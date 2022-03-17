@@ -75,7 +75,6 @@ namespace DesafioSeleniumMantis.Tests
             loginPage.RetornaTextoReajustes();
 
             Assert.AreEqual(mensagemErro, loginPage.RetornaTextoReajustes());
-            Thread.Sleep(10000);
         }
         [Test]
         [Category("TesteCI")]
