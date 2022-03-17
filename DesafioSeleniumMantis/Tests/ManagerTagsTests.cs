@@ -14,12 +14,10 @@ namespace DesafioSeleniumMantis.Tests
         #region Pages and Flows Objects
         LoginPage loginPage;
         LoginPasswordPage loginPasswordPage;
-        LostPasswordPage lostPasswordPage;
         MyViewPage myViewPage;
         ManageOverviewPage manageOverviewPage;
         ManageProjPage manageProjPage;
         ManageProjCreatePage manageProjCreatePage;
-        ManageProjCatPage manageProjCatPage;
         ManageUserPage manageUserPage;
         ManageUserCreatePage manageUserCreatePage;
         ManageUserEditPage manageUserEditPage;
