@@ -11,20 +11,10 @@ namespace DataDriven_NetCore_NUnit
         #region Pages and Flows Objects
         LoginPage loginPage;
         LoginPasswordPage loginPasswordPage;
-        LostPasswordPage lostPasswordPage;
         MyViewPage myViewPage;
         LoginSelectProjPage loginSelectProjPage;
         BugReportPage bugReportPage;
         ViewPage viewPage;
-        ViewAllBugPage viewAllBugPage;
-        QueryStorePage queryStorePage;
-        PrintAllBugPage printAllBugPage;
-        SummaryPage summaryPage;
-        BugUpdatePage bugUpdatePage;
-        BugNoteEditPage bugNoteEditPage;
-        BugNoteDeletePage bugNoteDeletePage;
-        TagAttachPage tagAttachPage;
-        BugChangeStatusPage bugChangeStatusPage;
         #endregion
 
         [TestCaseSource(typeof(DataDrivenHelpers), "CriarIssues_CSV")] 

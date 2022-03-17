@@ -15,20 +15,11 @@ namespace DesafioSeleniumMantis.Tests
         #region Pages and Flows Objects
         LoginPage loginPage;
         LoginPasswordPage loginPasswordPage;
-        LostPasswordPage lostPasswordPage;
         MyViewPage myViewPage;
         ManageOverviewPage manageOverviewPage;
         ManageProjPage manageProjPage;
         ManageProjCreatePage manageProjCreatePage;
         ManageProjCatPage manageProjCatPage;
-        ManageUserPage manageUserPage;
-        ManageUserCreatePage manageUserCreatePage;
-        ManageUserEditPage manageUserEditPage;
-        ManageUserProjDeletePage manageUserProjDeletePage;
-        ManageTagsPage manageTagsPage;
-        TagUpdatePage tagUpdatePage;
-        TagViewPage tagViewPage;
-        TagDeletePage tagDeletePage;
         ManageProjEditPage manageProjEditPage;
 
         #endregion
@@ -47,8 +38,8 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string nomeDoProjeto = "Projeto ElvercioNeto";
-            string descricao = "Desafio Selenium Mantis";
+            string nomeDoProjeto = "Projeto ElvercioNeto11";
+            string descricao = "Desafio Selenium Mantis1";
             #endregion
 
             loginPage.InserirLogin(usuario);
@@ -120,9 +111,7 @@ namespace DesafioSeleniumMantis.Tests
             manageProjPage.CriarCategoria(categoria);
 
 
-
-
-            //Assert.AreEqual(usuario, myViewPage.RetornaUsuarioLogado());
+            Assert.AreEqual(usuario, myViewPage.RetornaUsuarioLogado());
         }
         [Test]
         public void CriarCategoriaVazia()
