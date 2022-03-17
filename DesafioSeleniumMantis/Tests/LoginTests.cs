@@ -129,7 +129,6 @@ namespace DesafioSeleniumMantis.Tests
 
 
             Assert.AreEqual(mensagemErro, loginPage.RetornaTextoReajustes());
-            Thread.Sleep(5000);
         }
 
         [Test]
