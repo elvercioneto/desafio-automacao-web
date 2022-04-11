@@ -44,16 +44,14 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string id = GeneralHelpers.ReturnStringWithRandomNumbers(3);
-            string nomeUsuario = "tester"+id;
+            //string id = GeneralHelpers.ReturnStringWithRandomNumbers(3);
+            string nomeUsuario = "tester";//+id;
             string mensagemSucesso = "Clique aqui para prosseguir";
             #endregion
 
             loginPage.InserirLogin(usuario);
             loginPasswordPage.InserirPassword(senha);
             myViewPage.Gerenciar();
-            manageOverviewPage.GerenciarProjetos();
-            myViewPage.SelecionarProjetoElvercioNeto();
             manageOverviewPage.GerenciarUsuarios();
             manageUserPage.ClicarEmCriarNovaConta();
             manageUserCreatePage.CriarNovoUsuario(nomeUsuario);
@@ -85,8 +83,6 @@ namespace DesafioSeleniumMantis.Tests
             loginPage.InserirLogin(usuario);
             loginPasswordPage.InserirPassword(senha);
             myViewPage.Gerenciar();
-            //manageOverviewPage.GerenciarProjetos();
-            //myViewPage.SelecionarProjetoElvercioNeto();
             manageOverviewPage.GerenciarUsuarios();
             manageUserPage.ClicarEmCriarNovaConta();
             manageUserCreatePage.CriarNovoUsuario(nomeUsuario);
@@ -119,7 +115,7 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.Gerenciar();
             manageOverviewPage.GerenciarProjetos();
-            myViewPage.SelecionarProjetoElvercioNeto();
+            myViewPage.SelecionarProjetoCriado();
             manageOverviewPage.GerenciarUsuarios();
 
             manageUserPage.EscolherUsuarioCriado();
@@ -154,7 +150,7 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.Gerenciar();
             manageOverviewPage.GerenciarProjetos();
-            myViewPage.SelecionarProjetoElvercioNeto();
+            myViewPage.SelecionarProjetoCriado();
             manageOverviewPage.GerenciarUsuarios();
 
             manageUserPage.EscolherUsuarioCriado();

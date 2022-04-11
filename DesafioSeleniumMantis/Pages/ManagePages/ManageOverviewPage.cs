@@ -19,7 +19,7 @@ namespace DesafioSeleniumMantis.Pages
         By gerenciarPluginsLink = By.CssSelector("a[href='/manage_plugin_page.php']");
         By gerenciarConfiguracaoLink = By.CssSelector("a[href='/adm_permissions_report.php']");
         By clicarEmTodosOsProjetos = By.CssSelector("li[id='dropdown_projects_menu'] a[class='dropdown-toggle']");
-        By clicarEmProjetoElvercioNeto = By.XPath("//a[normalize-space()='Projeto ElvercioNeto']");
+        By clicarEmProjetoCriado = By.XPath("//a[normalize-space()='Projeto ElvercioNeto']");
 
         #endregion
 
@@ -58,9 +58,9 @@ namespace DesafioSeleniumMantis.Pages
         {
             Click(clicarEmTodosOsProjetos);
         }
-        public void ClicarEmProjetoElvercioNeto()
+        public void ClicarEmProjetoCriado()
         {
-            Click(clicarEmProjetoElvercioNeto);
+            Click(clicarEmProjetoCriado);
         }
         #endregion
         public ManageProjPage GerenciarProjetos()
@@ -69,11 +69,11 @@ namespace DesafioSeleniumMantis.Pages
             return new ManageProjPage();
         }
         
-        public ManageOverviewPage SelecionarProjetoElvercioNeto()
+        public ManageOverviewPage SelecionarProjetoCriado()
         {
             {
                 ClicarEmTodosOsProjetos();
-                ClicarEmProjetoElvercioNeto();
+                ClicarEmProjetoCriado();
                 return new ManageOverviewPage();
             }
         }

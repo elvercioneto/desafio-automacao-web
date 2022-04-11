@@ -15,7 +15,7 @@ namespace DesafioSeleniumMantis.Pages
         By filtroBuscarContaInput = By.Id("search");
         By aplicarFiltroButton = By.CssSelector("input[type='submit']");
         By perdeuASenhalink = By.LinkText("Perdeu a sua senha?");
-        By clicarNoUsuarioCriado = By.LinkText("tester");
+        By clicarNoUsuarioCriado = By.CssSelector(".table tbody :nth-of-type(2) > td > a");
         #endregion
 
         #region Actions
@@ -30,7 +30,7 @@ namespace DesafioSeleniumMantis.Pages
         }
 
         #endregion
-        public ManageUserCreatePage SelecionarProjetoElvercioNeto()
+        public ManageUserCreatePage SelecionarProjetoCriado()
         {
             {
                 ClicarEmCriarNovaConta();

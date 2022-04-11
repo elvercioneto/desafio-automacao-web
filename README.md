@@ -145,7 +145,7 @@ embutidos. Sugestões: Allure Report ou ExtentReport.
  > As classes *ProjectsDBSteps.cs*, *TagsDBSteps.cs* e *UsuariosDBSteps.cs* realizam testes que buscam informações na base de dados para concluir os testes.
  - [x] 8) Um dos scripts deve injetar Javascript para executar alguma operação na tela. O objetivo
 aqui é exercitar a injeção de Javascript dentro do código do Selenium.
-> No próprio template da Base2 existe um método `SendKeysJavaScript()` na classe *PageBase.cs* que realiza o preenchimento de um campopor ação de JavaScript. 
+> No próprio template da Base2 existe um método `SendKeysJavaScript()` na classe *PageBase.cs* que realiza o preenchimento de um campo por ação de JavaScript. Na classe *LoginPage.cs*, o método `InserirLogin` implementa esse script. O método foi utilizado no cenário `RealizarLoginComSucesso()` dentro da classe *LoginTests.cs*
  - [x] 9) Testes deverão ser agendados pelo Gitlab-CI, Azure DevOps, Jenkins, CircleCI, TFS,
 TeamCity ou outra ferramenta de CI que preferir
 > Os testes estão implementados na pipeline do AzureDevOps. Nele tem uma configuração chamada *Enable continuous integration* que faz com que a cada push realizado no repositório do GitHub, a Pipeline seja disparada automaticamente.

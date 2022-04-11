@@ -19,7 +19,7 @@ namespace DesafioSeleniumMantis.Pages
         By resumoLink = By.CssSelector("a[href='/summary_page.php']");
         By gerenciarLink = By.CssSelector("a[href='/manage_overview_page.php']");
         By clicarEmTodosOsProjetos = By.CssSelector("li[id='dropdown_projects_menu'] a[class='dropdown-toggle']");
-        By clicarEmProjetoElvercioNeto = By.XPath("//a[normalize-space()='Projeto ElvercioNeto']");
+        By clicarEmProjetoCriado = By.CssSelector(".project-link"); 
         By clicarEmIssuePrioridadeObstaculo = By.LinkText("Teste gravidade obstáculo");
         #endregion
 
@@ -36,9 +36,9 @@ namespace DesafioSeleniumMantis.Pages
         {
             Click(clicarEmTodosOsProjetos);
         }
-        public void ClicarEmProjetoElvercioNeto()
+        public void ClicarEmProjetoCriado()
         {
-            Click(clicarEmProjetoElvercioNeto);
+            Click(clicarEmProjetoCriado);
         }
         public void ClicarEmCriarTarefa()
         {
@@ -60,10 +60,10 @@ namespace DesafioSeleniumMantis.Pages
             ClicarEmGerenciar();
             return new ManageOverviewPage();
         }
-        public MyViewPage SelecionarProjetoElvercioNeto()
+        public MyViewPage SelecionarProjetoCriado()
         {
             ClicarEmTodosOsProjetos();
-            ClicarEmProjetoElvercioNeto();
+            ClicarEmProjetoCriado();
             return  new MyViewPage();
         }
 
