@@ -62,7 +62,7 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.RetornaUsuarioLogado();
             myViewPage.ClicarEmCriarTarefa();
-            loginSelectProjPage.EscolherProjeto(projeto);
+            //loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
         }
