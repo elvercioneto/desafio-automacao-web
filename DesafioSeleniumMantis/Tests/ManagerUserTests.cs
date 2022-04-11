@@ -59,38 +59,7 @@ namespace DesafioSeleniumMantis.Tests
 
             Assert.AreEqual(mensagemSucesso, manageUserCreatePage.RetornaAlertaDeSucesso());
         }
-        [Test]
-        public void CriarUsuarioRepetidoUtilizandoBancoDeDados()
-        {
-            loginPage = new LoginPage();
-            loginPasswordPage = new LoginPasswordPage();
-            myViewPage = new MyViewPage();
-            manageOverviewPage = new ManageOverviewPage();
-            manageProjPage = new ManageProjPage();
-            manageProjCreatePage = new ManageProjCreatePage();
-            manageUserPage = new ManageUserPage();
-            manageUserCreatePage = new ManageUserCreatePage();
-
-
-            #region Parameters
-            string usuario = "administrator";
-            string senha = "elvercioneto";
-            string nomeUsuarioBD = null;
-            string nomeUsuario = UsuariosDBSteps.RetornaUsuarioRepetido(nomeUsuarioBD);
-            string mensagemErro = "APPLICATION ERROR #800";
-            #endregion
-
-            loginPage.InserirLogin(usuario);
-            loginPasswordPage.InserirPassword(senha);
-            myViewPage.Gerenciar();
-            manageOverviewPage.GerenciarUsuarios();
-            manageUserPage.ClicarEmCriarNovaConta();
-            manageUserCreatePage.CriarNovoUsuario(nomeUsuario);
-
-
-            Assert.AreEqual(mensagemErro, manageUserCreatePage.RetornaAlertaDeErro());
-        }
-
+        
         [Test]
         public void AtribuirUsuarioAoProjeto()
         {

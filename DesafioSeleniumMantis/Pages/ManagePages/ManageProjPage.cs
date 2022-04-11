@@ -14,7 +14,7 @@ namespace DesafioSeleniumMantis.Pages
         By criarNovoProjetoButton = By.XPath("//button[normalize-space()='Criar Novo Projeto']");
         By adicionarCategoriaInput = By.CssSelector("input[name='name']");
         By adicionarCategoriaButton = By.CssSelector("input[value='Adicionar Categoria']");
-        By projetoCriado = By.XPath("//td//a[contains(text(),'Projeto ElvercioNeto')]");
+        By projetoCriado = By.XPath("//tbody/tr[2]/td[1]/a[1]");
         #endregion
 
         #region Actions

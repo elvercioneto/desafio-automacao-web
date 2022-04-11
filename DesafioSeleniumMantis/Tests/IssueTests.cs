@@ -64,7 +64,6 @@ namespace DesafioSeleniumMantis.Tests
             myViewPage.ClicarEmCriarTarefa();
             loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
-            Thread.Sleep(5000);
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
         }
 
@@ -190,7 +189,6 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string projeto = "Projeto ElvercioNeto";
             string categoria = "[Todos os Projetos] TesteElvercio";
             string frequencia = "sempre";
             string gravidade = "grande";
@@ -200,7 +198,7 @@ namespace DesafioSeleniumMantis.Tests
             string resumo = "Falha ao carregar tela "+id;
             string descricao = "Teste Descrição";
             string tag = null;
-            string marcador = UsuariosDBSteps.RetornaMarcador(tag);
+            string marcador = TagsDBSteps.RetornaMarcador(tag);
 
 
             #endregion
@@ -209,9 +207,8 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.RetornaUsuarioLogado();
             myViewPage.ClicarEmCriarTarefa();
-            loginSelectProjPage.EscolherProjeto(projeto);
+            //loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssueComMarcador(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao, marcador);
-            Thread.Sleep(5000);
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
         }
 
@@ -631,7 +628,6 @@ namespace DesafioSeleniumMantis.Tests
             myViewPage.ClicarEmVerTarefas();
             viewAllBugPage.BuscarIssueporNumero(filtro);
             viewPage.RetornaMensagemErro1100();
-            Thread.Sleep(5000);
 
             Assert.AreEqual(mensagemErro1100, viewPage.RetornaMensagemErro1100());
         }

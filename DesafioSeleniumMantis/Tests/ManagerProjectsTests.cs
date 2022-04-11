@@ -68,10 +68,9 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            //string nomeProjetoBD = null;
-            string nomeDoProjeto = "Projeto ElvercioNeto";
-            //string nomeDoProjeto = ProjectsDBSteps.RetornarProjeto(nomeProjetoBD);
-            string descricao = "Projeto ElvercioNeto";
+            string id = GeneralHelpers.ReturnStringWithRandomNumbers(3);
+            string nomeDoProjeto = "Projeto " + id;
+            string descricao = "Descrição "+ nomeDoProjeto;
             string novaDescricao = "Projeto alterado";
             #endregion
 
@@ -157,8 +156,8 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string categoriaBD = null;
-            string categoria = ProjectsDBSteps.RetornarCategoriaDuplicada(categoriaBD);
+            string category = null;
+            string categoria = ProjectsDBSteps.RetornaCategoriaDuplicada(category);
             string mensagemErro = "APPLICATION ERROR #1500";
             #endregion
 

@@ -1,20 +1,14 @@
 ﻿using DesafioSeleniumMantis.Helpers;
-using MySql.Data.MySqlClient;
+using DesafioSeleniumMantis.Queries;
 
 namespace DesafioSeleniumMantis.DataBaseSteps
 {
     public class ProjectsDBSteps
     {
-        public static string RetornarProjeto(string projeto)
+       
+        public static string RetornaCategoriaDuplicada(string category)
         {
-            string query = "SELECT name FROM mantis_project_table ORDER BY ID DESC LIMIT 1";
-
-            return DataBaseHelpers.RetornaDadosQuery(query)[0];
-        }
-
-        public static string RetornarCategoriaDuplicada(string categoria)
-        {
-            string query = "SELECT name FROM mantis_category_table ORDER BY ID DESC LIMIT 1";
+            string query = ProjectsQueries.RetornaCategoriaDuplicada.Replace("$category", category);
 
             return DataBaseHelpers.RetornaDadosQuery(query)[0];
         }

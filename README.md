@@ -142,7 +142,7 @@ browsers separadamente.
 embutidos. Sugestões: Allure Report ou ExtentReport.
  > O relatório de testes é gerado tanto para a execução local quanto remota no formato HTML através dos métodos da classe *ExtentReports.cs*.
  - [x] 7) A massa de testes deve ser preparada neste projeto, seja com scripts carregando massa nova no BD ou com restore de banco de dados.
- > As classes *ProjectsDBSteps.cs*, *TagsDBSteps.cs* e *UsuariosDBSteps.cs* realizam testes que buscam informações na base de dados para concluir os testes.
+ > As classes que estão dentro de `DataBaseSteps` chamam as Queries que estão organizadas em `Queries`, que fazem as consultas aos parâmetros. Os métodos que utilizam essas consultas são: `RealizarLoginComSucessoUsandoBancoDeDados()` em *LoginTests.cs*, `CriarIssueComMarcadorUtilizandoBancoDeDados()` em *IssueTests.cs* e `CriarCategoriaDuplicadaUtilizandoBancoDeDados()` em *ManagerProjectsTests.cs*.
  - [x] 8) Um dos scripts deve injetar Javascript para executar alguma operação na tela. O objetivo
 aqui é exercitar a injeção de Javascript dentro do código do Selenium.
 > No próprio template da Base2 existe um método `SendKeysJavaScript()` na classe *PageBase.cs* que realiza o preenchimento de um campo por ação de JavaScript. Na classe *LoginPage.cs*, o método `InserirLogin` implementa esse script. O método foi utilizado no cenário `RealizarLoginComSucesso()` dentro da classe *LoginTests.cs*
