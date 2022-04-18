@@ -156,7 +156,7 @@ namespace DesafioSeleniumMantis.Tests
             #region Parameters
             string usuario = "administrator";
             string senha = "elvercioneto";
-            string category = null;
+            string category = "TesteElvercio";
             string categoria = ProjectsDBSteps.RetornaCategoriaDuplicada(category);
             string mensagemErro = "APPLICATION ERROR #1500";
             #endregion

@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RetornaCategoriaDuplicada" xml:space="preserve">
-    <value>SELECT cat.name FROM mantis_category_table cat WHERE cat.name = 'TesteElvercio';</value>
+    <value>SELECT cat.name FROM mantis_category_table cat WHERE cat.name = '$categoria';</value>
   </data>
 </root>

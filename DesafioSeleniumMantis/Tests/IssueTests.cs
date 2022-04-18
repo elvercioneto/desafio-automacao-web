@@ -78,7 +78,7 @@ namespace DesafioSeleniumMantis.Tests
             viewPage = new ViewPage();
 
             #region Parameters
-            string username = null;
+            string username = "administrator";
             string usuario = UsuariosDBSteps.RetornaUsuario(username);
             string senha = "elvercioneto";
             string projeto = "Projeto ElvercioNeto";
@@ -197,7 +197,7 @@ namespace DesafioSeleniumMantis.Tests
             string id = GeneralHelpers.ReturnStringWithRandomNumbers(3);
             string resumo = "Falha ao carregar tela "+id;
             string descricao = "Teste Descrição";
-            string tag = null;
+            string tag = "release1";
             string marcador = TagsDBSteps.RetornaMarcador(tag);
 
 
