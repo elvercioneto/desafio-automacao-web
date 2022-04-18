@@ -7,7 +7,7 @@ namespace DesafioSeleniumMantis.DataBaseSteps
     {
         public static string RetornaUsuario(string username)
         {
-            string query = UsuariosQueries.RetornaUsuario.Replace("$username", username);
+            string query = UsuariosQueries.RetornaUsuario;
 
             return DataBaseHelpers.RetornaDadosQuery(query)[0];
         }

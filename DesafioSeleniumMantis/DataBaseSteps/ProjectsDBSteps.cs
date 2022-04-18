@@ -8,7 +8,7 @@ namespace DesafioSeleniumMantis.DataBaseSteps
        
         public static string RetornaCategoriaDuplicada(string category)
         {
-            string query = ProjectsQueries.RetornaCategoriaDuplicada.Replace("$category", category);
+            string query = ProjectsQueries.RetornaCategoriaDuplicada;
 
             return DataBaseHelpers.RetornaDadosQuery(query)[0];
         }

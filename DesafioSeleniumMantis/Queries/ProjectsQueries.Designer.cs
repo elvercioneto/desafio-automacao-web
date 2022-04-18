@@ -67,13 +67,6 @@ namespace DesafioSeleniumMantis.Queries {
         ///where user.username = &apos;$username&apos;;.
         /// </summary>
        
-        //internal static string RetornaProjeto
-        //{
-        //    get
-        //    {
-        //        return ResourceManager.GetString("RetornaProjeto", resourceCulture);
-        //    }
-        //}
         internal static string RetornaCategoriaDuplicada
         {
             get
