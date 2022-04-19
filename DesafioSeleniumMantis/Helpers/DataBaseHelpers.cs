@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+
+
 
 namespace DesafioSeleniumMantis.Helpers
 {
@@ -22,7 +21,7 @@ namespace DesafioSeleniumMantis.Helpers
             return connection;
         }
 
-        
+
         public static void ExecuteQuery(string query)
         {
             using (MySqlCommand cmd = new MySqlCommand(query, GetDBConnection()))
@@ -73,6 +72,27 @@ namespace DesafioSeleniumMantis.Helpers
             }
 
             return lista;
+        }
+        public static void ResetMantisDataBase()
+        {
+
+            string connectionString = GetDBConnection().ConnectionString;
+
+            string file = "Queries/mantis_base.sql";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlBackup mb = new MySqlBackup(cmd))
+                    {
+                        cmd.Connection = connection;
+                        connection.Open();
+                        mb.ImportFromFile(file);
+                        connection.Close();
+                    }
+                }
+            }
         }
     }
 }
