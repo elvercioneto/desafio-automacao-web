@@ -1,8 +1,8 @@
 # Desafio de Automação Selenium WebDriver - Base2 
   
-Projeto realizado para atingir as metas propostas no Desafio Web: Selenium WebDriver da Base2.
+Esse projeto tem 9 metas propostas e faz parte do Desafio Web: Selenium WebDriver da Base2.
 # SUT (Software Under Test)
-Os testes serão realizados no sistema Mantis Bug Tracker.  
+O sistema escolhido para a realização dos testes será o Mantis Bug Tracker.  
 
 # Tecnologias Utilizadas 
 - [Docker](https://www.docker.com/) - Ferramenta para levantar containers através de imagens
@@ -143,7 +143,7 @@ browsers separadamente.
 embutidos. Sugestões: Allure Report ou ExtentReport.
  > O relatório de testes é gerado tanto para a execução local quanto remota no formato HTML através dos métodos da classe *ExtentReports.cs*.
  - [x] 7) A massa de testes deve ser preparada neste projeto, seja com scripts carregando massa nova no BD ou com restore de banco de dados.
- > As classes que estão dentro de `DataBaseSteps` chamam as Queries que estão organizadas em `Queries`, que fazem as consultas aos parâmetros. Os métodos que utilizam essas consultas são: `RealizarLoginComSucessoUsandoBancoDeDados()` em *LoginTests.cs*, `CriarIssueComMarcadorUtilizandoBancoDeDados()` em *IssueTests.cs* e `CriarCategoriaDuplicadaUtilizandoBancoDeDados()` em *ManagerProjectsTests.cs*.
+ > A massa de dados está sendo tratada através do método `ResetMantisDatabase()` na classe `DatabaseHelper` que realiza o restore do Banco de Dados antes da execução dos testes.
  - [x] 8) Um dos scripts deve injetar Javascript para executar alguma operação na tela. O objetivo
 aqui é exercitar a injeção de Javascript dentro do código do Selenium.
 > No próprio template da Base2 existe um método `SendKeysJavaScript()` na classe *PageBase.cs* que realiza o preenchimento de um campo por ação de JavaScript. Na classe *LoginPage.cs*, o método `InserirLogin` implementa esse script. O método foi utilizado no cenário `RealizarLoginComSucesso()` dentro da classe *LoginTests.cs*

@@ -41,7 +41,6 @@ namespace DataDriven_NetCore_NUnit
             myViewPage.ClicarEmCriarTarefa();
             loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
-            Thread.Sleep(5000);
 
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
             

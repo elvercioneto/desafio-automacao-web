@@ -134,11 +134,10 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.RetornaUsuarioLogado();
             myViewPage.ClicarEmCriarTarefa();
-            loginSelectProjPage.EscolherProjeto(projeto);
+            //loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssue(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao);
             viewPage.AplicarMarcador();
 
-            Thread.Sleep(5000);
             Assert.AreEqual(mensagemErro, tagAttachPage.RetornaMensagemErro());
         }
         [Test]
@@ -171,9 +170,8 @@ namespace DesafioSeleniumMantis.Tests
             loginPasswordPage.InserirPassword(senha);
             myViewPage.RetornaUsuarioLogado();
             myViewPage.ClicarEmCriarTarefa();
-            loginSelectProjPage.EscolherProjeto(projeto);
+            //loginSelectProjPage.EscolherProjeto(projeto);
             bugReportPage.PreencherDadosDaIssueComMarcador(categoria, frequencia, gravidade, prioridade, atribuirA, resumo, descricao, marcador);
-            Thread.Sleep(5000);
             Assert.AreEqual(descricao, viewPage.RetornaDescricaoBug());
         }
         [Test]
@@ -598,7 +596,6 @@ namespace DesafioSeleniumMantis.Tests
             myViewPage.RetornaUsuarioLogado();
             myViewPage.ClicarEmVerTarefas();
             viewAllBugPage.BuscarIssueporNumero(filtro);
-            Thread.Sleep(2000);
 
             Assert.AreEqual(filtro, viewPage.RetornaNumeroBug());
         }
